@@ -4,15 +4,15 @@
   width: 80%;
   background-color: #fff;
   margin: 6px 4px;
-  height: 40px;
   border-radius: 12px;
 
   p {
     flex: 1;
+    margin: 4px;
+    word-break: break-word;
   }
-
 }
 
-.todoItem--done {
+.todoItem_done {
   text-decoration: line-through;
 }

@@ -1,10 +1,10 @@
 import React from 'react'
-import './TodoItem.scss'
-
+import { useDispatch } from 'react-redux'
 import Checkbox from '@mui/material/Checkbox'
 
-import { useDispatch } from 'react-redux'
 import { setCheck } from '../features/todoSlice'
+
+import './TodoItem.scss'
 
 const TodoItem = ({ name, done, id }) => {
   const dispatch = useDispatch()
@@ -21,7 +21,7 @@ const TodoItem = ({ name, done, id }) => {
         onChange={handleCheck}
         inputProps={{ 'aria-label': 'secondary checkbox' }}
       />
-      <p className={done && 'todoItem--done'}>{name}</p>
+      <p className={done && 'todoItem_done'}>{name}</p>
     </div>
   )
 }

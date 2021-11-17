@@ -6,4 +6,3 @@ export default configureStore({
     todos: todoReducer
   }
 })
-

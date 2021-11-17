@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
-import './TodoInput.scss'
-
 import { useDispatch } from 'react-redux'
+
 import { saveTodo } from '../features/todoSlice'
+
+import './TodoInput.scss'
 
 const TodoInput = () => {
   const [input, setInput] = useState('')
   const dispatch = useDispatch()
 
   const addTodo = () => {
-
-    dispatch(saveTodo({
-      name: input,
-      done: false,
-      id: Date.now()
-    }))
+    if (input.length > 0) {
+      dispatch(saveTodo({
+        name: input,
+        done: false,
+        id: Date.now()
+      }))
+    }
 
     setInput('')
   }
